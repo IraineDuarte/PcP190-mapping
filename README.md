@@ -12,7 +12,7 @@
 
 
 ***
-### How do I get the species' genomes and their numbers?
+### How do I get the species'genomes and their numbers?
 
 * All SRAs (Sequence Read Archive) are selected, using the data available at the National Center for Biotechnology Information (NCBI), on the platform (https://www.ncbi.nlm.nih.gov/sra). 
   * Each species will have an SRA (a code). It is with it that the user will work.

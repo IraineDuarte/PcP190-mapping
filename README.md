@@ -46,7 +46,7 @@ Follow the code file (in this repository) commands step by step
  
  __Through the construction of the pipeline, we describe a protocol that allows the search and identification of the satDNA PcP190. This protocol made it possible to recognize this family of satDNA in five new species. The variation found in the number of reads between closely related species could be explained by the hypothesis of repetitive DNA library__.
  
-__The data generated in this work show that the pipeline was able to map readings of satellite DNA, providing a model to verify the presence / absence of different sequences in the genomes and represent an initial screening strategy for future research in the presence / absence analysis of families of Satellite DNA in the available genomes__.
+__The data generated in this work show that the pipeline was able to map readings of satellite DNA, providing a model to verify the presence / absence of different sequences in the genomes and represent an initial screening strategy for future research in analysis of families of Satellite DNA in the available genomes__.
 
 
 

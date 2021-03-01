@@ -43,6 +43,10 @@ Follow the code file (in this repository) commands step by step
  ![Figure 1 para git](https://user-images.githubusercontent.com/78439023/109512259-abb47680-7a82-11eb-9693-b0d35867820f.png)
 
  ***
+ 
+ __Through the construction of the pipeline, we describe a protocol that allows the search and identification of the satDNA PcP190. This protocol made it possible to recognize this family of satDNA in five new species, belonging to three major lineages of anurans, two species of the family Hylidae (Hyla arborea, Hyla chinensis and Agalychnis moreletii) and for the first time in the families Bufonidae (Rhinella marina) and in the family Dendrobatidae (Oophaga pumilio). The variation found in the number of reads between closely related species could be explained by the hypothesis of repetitive DNA library.
+The data generated in this work show that the pipeline was able to map readings of satellite DNA, providing a model to verify the presence / absence of different sequences in the genomes and represent an initial screening strategy for future research in the presence / absence analysis of families of Satellite DNA in the available genomes__.
+
 
 
 

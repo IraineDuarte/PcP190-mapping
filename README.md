@@ -10,20 +10,25 @@
 - [ ] Samtools 1.9 (Sequence Aligment/Map) 
 
 
+
 ***
 ### How do I get the species' genomes and their numbers?
+
 * All SRAs (Sequence Read Archive) are selected, using the data available at the National Center for Biotechnology Information (NCBI), on the platform (https://www.ncbi.nlm.nih.gov/sra). 
   * Each species will have an SRA (a code). It is with it that the user will work.
+  
 * The SRAs will be downloaded through the SRA EXPLORER online platform, free of charge (https://sra-explorer.info/#), in the *fastq.gz* format.
   * In this study, table 1, lists the name of the anuran species and their SRAs.
  
 
+
 **ex:**
-**Species name | Respective SRAs of the species
+Species name | Respective SRAs of the species
 ---|---
 Anuran species 1 | SRA number
 Anuran species 2 | SRA number
 Anuran species 3 | SRA number
+
 
 
  ***

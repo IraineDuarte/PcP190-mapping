@@ -40,7 +40,6 @@ Anuran species 3 | SRA number
  # Pipeline workflow
  ![Figure 1 para git](https://user-images.githubusercontent.com/78439023/109512259-abb47680-7a82-11eb-9693-b0d35867820f.png)
 
-  
  ***
 
 

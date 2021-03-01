@@ -35,7 +35,7 @@ Anuran species 3 | SRA number
 
 ### Using the programs
 ```
-* Follow the __code file__ commands step by step
+__Follow the __code file__ commands step by step__
 ```
 
 ***

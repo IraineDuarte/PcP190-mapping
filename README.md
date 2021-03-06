@@ -3,11 +3,13 @@
  **A simple pipeline as a strategy to use raw data, in order to evaluate the distribution of satcNA PcP190 in the anuran genomes available in public data access platforms and, thus, provide evidence about the existence of these repetitive sequences in the genomes**.
  
  
+ 
  ***
   ## Requirements for using the Pipeline
 ### Install the programs on the Linux system:
 **1. BWA 0.7.17 (Burrows-Wheeler Aligner)
 **2. Samtools 1.9 (Sequence Aligment/Map) 
+
 
 - BWA
 
@@ -23,6 +25,7 @@
             4. ./configure
             5. make
             6. make install
+
 
 
 ***
@@ -46,12 +49,16 @@ Anuran species 3 | SRA number
 
 
  ***
+ 
+ 
 
 ### Using the programs
 
 ```
 If you prefer, follow the complete file commands step by step, the file is present in this repository, go to the folder> supplementary material> supplementary files> supplementary file 2. 
 ```
+
+
 
 - Construction of the index (sequences / genomes of interest for the search) in the       format.fasta.
 
@@ -65,6 +72,8 @@ If you prefer, follow the complete file commands step by step, the file is prese
             3. samtools view -b -F 4 Anuran_especies_mapping_sorted.bam > Anuran_especies _mapping_sorted_mapped.bam
             4. samtools index Anuran_especies_mapping_sorted_mapped.bam > Anuran_especies _mapping_sorted_mapped.bam.bai
             
+            
+            
 ```
 Using visualization software, in this case the Tablet (1.19.09.03), the user compares the last two generated files, with each other. (To see generated images, in this work, go to Supplementary material> supplementary figures).
 ```
@@ -75,6 +84,7 @@ Using visualization software, in this case the Tablet (1.19.09.03), the user com
  ![Figure 1 para git](https://user-images.githubusercontent.com/78439023/109512259-abb47680-7a82-11eb-9693-b0d35867820f.png)
 
  ***
+ 
  
  __Through the construction of the pipeline, we describe a protocol that allows the search and identification of the satDNA PcP190. This protocol made it possible to recognize this family of satDNA in five new species. The variation found in the number of reads between closely related species could be explained by the hypothesis of repetitive DNA library__.
  

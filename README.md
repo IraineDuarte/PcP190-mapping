@@ -48,9 +48,28 @@ Anuran species 3 | SRA number
  ***
 
 ### Using the programs
+
 ```
-Follow the code file (in this repository) commands step by step
+If you prefer, follow the complete file commands step by step,
+  the file is present in this repository, go to the folder> supplementary material> supplementary files> supplementary file 2. 
 ```
+
+- Construction of the index (sequences / genomes of interest for the search) in the       format.fasta.
+
+            1. bwa sequences_index.fasta
+            2. bwa mem seqs_index.fasta  SRA_1.fastq SRA_2.fastq > Anuran_especies_mapping.sam 
+            
+ - Conversion, manipulation and data extraction, through Samtools 1.9
+
+            1. samtools view -bS Anuran_especies_mapping.sam> Anuran_especies_mapping.bam
+            2. samtools sort Anuran_especies_mapping.bam > Anuran_especies_mapping_sorted.bam
+            3. samtools view -b -F 4 Anuran_especies_mapping_sorted.bam > Anuran_especies _mapping_sorted_mapped.bam
+            4. samtools index Anuran_especies_mapping_sorted_mapped.bam > Anuran_especies _mapping_sorted_mapped.bam.bai
+            
+```
+Using visualization software, in this case the Tablet (1.19.09.03), the user compares the last two generated files, with each other. (To see generated images, in this work, go to Supplementary material> supplementary figures).
+```
+
 
 ***
  # Pipeline workflow

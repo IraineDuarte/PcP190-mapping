@@ -50,8 +50,7 @@ Anuran species 3 | SRA number
 ### Using the programs
 
 ```
-If you prefer, follow the complete file commands step by step,
-  the file is present in this repository, go to the folder> supplementary material> supplementary files> supplementary file 2. 
+If you prefer, follow the complete file commands step by step, the file is present in this repository, go to the folder> supplementary material> supplementary files> supplementary file 2. 
 ```
 
 - Construction of the index (sequences / genomes of interest for the search) in the       format.fasta.

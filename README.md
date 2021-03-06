@@ -6,13 +6,27 @@
  ***
   ## Requirements for using the Pipeline
 ### Install the programs on the Linux system:
-- [ ] BWA 0.7.17 (Burrows-Wheeler Aligner)
-- [ ] Samtools 1.9 (Sequence Aligment/Map) 
+**1. BWA 0.7.17 (Burrows-Wheeler Aligner)
+**2. Samtools 1.9 (Sequence Aligment/Map) 
 
+- BWA
+
+            1. wget https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.17.tar.bz2
+            2. tar -xjvf bwa-0.7.17.tar.bz2
+            3. make 
+
+- Samtools 
+
+            1. wget https://github.com/samtools/samtools/releases/download/1.4.1/samtools-1.4.1.tar.bz2 -O samtools.tar.bz2
+            2. tar -xjvf samtools.tar.bz2 
+            3. cd samtools-1.4.1/
+            4. ./configure
+            5. make
+            6. make install
 
 
 ***
-### How do I get the species'genomes and their numbers?
+## How do I get the species'genomes and their numbers?
 
 * All SRAs (Sequence Read Archive) are selected, using the data available at the National Center for Biotechnology Information (NCBI), on the platform (https://www.ncbi.nlm.nih.gov/sra). 
   * Each species will have an SRA (ID number). It is with it that the user will work.

@@ -15,7 +15,8 @@
 
             1. wget https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.17.tar.bz2
             2. tar -xjvf bwa-0.7.17.tar.bz2
-            3. make 
+            3. cd bwa
+            4. make 
 
 - Samtools 
 

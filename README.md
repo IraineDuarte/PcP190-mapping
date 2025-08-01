@@ -1,4 +1,4 @@
-# DNAMAPP_Pipeline
+# SRA data analysis workflow for detection of satDNA PcP190 in anurans
  
  **A simple pipeline as a strategy to use raw data, in order to evaluate the distribution of satcNA PcP190 in the anuran genomes available in public data access platforms and, thus, provide evidence about the existence of these repetitive sequences in the genomes**.
  
@@ -7,26 +7,45 @@
  ***
   ## Requirements for using the Pipeline
 ### Install the programs on the Linux system:
-**1. BWA 0.7.17 (Burrows-Wheeler Aligner)
-**2. Samtools 1.9 (Sequence Aligment/Map) 
+## Prerequisites
+
+Install required development packages before building the tools:
+
+```bash
+sudo apt update
+sudo apt install build-essential zlib1g-dev libbz2-dev liblzma-dev \
+libncurses5-dev libcurl4-openssl-dev autoconf
+
 
 
 - BWA
 
             1. wget https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.17.tar.bz2
-            2. tar -xjvf bwa-0.7.17.tar.bz2
+            2. tar -xjf bwa-0.7.17.tar.bz2
             3. cd bwa
-            4. make 
+            4. make
+
+            # (Optional) Move the executable to a system-wide location
+              - sudo cp bwa /usr/local/bin/
+
+            # Check BWA
+              bwa
+            # Output should show the BWA command options
 
 - Samtools 
 
-            1. wget https://github.com/samtools/samtools/releases/download/1.4.1/samtools-1.4.1.tar.bz2 -O samtools.tar.bz2
-            2. tar -xjvf samtools.tar.bz2 
-            3. cd samtools-1.4.1/
+            1. wget https://github.com/samtools/samtools/releases/download/1.20/samtools-1.20.tar.bz2
+            2. tar -xjf samtools-1.20.tar.bz2
+            3. cd samtools/
             4. ./configure
             5. make
-            6. make install
+            6. sudo make install
 
+            # Check Samtools version
+              samtools --version
+              # Output should be: samtools 1.20
+         
+            
 
 
 ***
@@ -56,27 +75,35 @@ Anuran species 3 | SRA number
 ### Using the programs
 
 ```
-If you prefer, follow the complete file commands step by step, the file is present in this repository, go to the folder> supplementary material> supplementary files> supplementary file 2. 
+
 ```
 
+### 🛠️ Mapping Workflow (using BWA)
+- Sequences of the satDNA PcP190 isolated from different species of anurans, used in this mapping experiment (Table 2) and and the SRAS of each species in this study.
 
-
-- Construction of the index (sequences / genomes of interest for the search) in the       format.fasta.
+     **Index the reference sequences** (PcP190 consensus or species-specific repeats):
 
             1. bwa sequences_index.fasta
             2. bwa mem seqs_index.fasta  SRA_1.fastq SRA_2.fastq > Anuran_especies_mapping.sam 
             
- - Conversion, manipulation and data extraction, through Samtools 1.9
+ - 🛠️ Conversion, manipulation and data extraction, through Samtools.
+          ## Processing SAM to Sorted and Indexed BAM with Samtools
+
+        Once the mapping is complete, the `.sam` file can be converted and filtered as follows:
 
             1. samtools view -bS Anuran_especies_mapping.sam> Anuran_especies_mapping.bam
-            2. samtools sort Anuran_especies_mapping.bam > Anuran_especies_mapping_sorted.bam
-            3. samtools view -b -F 4 Anuran_especies_mapping_sorted.bam > Anuran_especies _mapping_sorted_mapped.bam
-            4. samtools index Anuran_especies_mapping_sorted_mapped.bam > Anuran_especies _mapping_sorted_mapped.bam.bai
-            
+            2. samtools sort Anuran_especies_mapping.bam > Anuran_especies_sorted.bam
+            3. samtools view -b -F 4 Anuran_especies_sorted.bam > Anuran_especies_sorted_mapped.bam
+            4. samtools index Anuran_especies_sorted_mapped.bam > Anuran_especies_sorted_mapped.bam.bai
+
+
+          ##  Check how many reads are in the BAM file
+            1. samtools view -c Anuran_especies_sorted_mapped.bam
+                   
             
             
 ```
-Using visualization software, in this case the Tablet (1.19.09.03), the user compares the last two generated files, with each other. (To see generated images, in this work, go to Supplementary material> supplementary figures).
+Using visualization software—specifically Tablet (version 1.21.02 )—the user compares the last two generated files with each other.
 ```
 
 

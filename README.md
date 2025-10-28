@@ -35,7 +35,7 @@ libncurses5-dev libcurl4-openssl-dev autoconf
 - Samtools 
 
             1. wget https://github.com/samtools/samtools/releases/download/1.20/samtools-1.20.tar.bz2
-            2. tar -xjf samtools-1.20.tar.bz2
+            2. cd sa 
             3. cd samtools/
             4. ./configure
             5. make
@@ -83,7 +83,7 @@ Anuran species 3 | SRA number
 
      **Index the reference sequences** (PcP190 consensus or species-specific repeats):
 
-            1. bwa sequences_index.fasta
+            1. bwa index sequences_index.fasta
             2. bwa mem seqs_index.fasta  SRA_1.fastq SRA_2.fastq > Anuran_especies_mapping.sam 
             
  - 🛠️ Conversion, manipulation and data extraction, through Samtools.
